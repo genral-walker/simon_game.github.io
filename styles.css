@@ -3,10 +3,10 @@ body {
   background-color: #011F3F;
 }
 
-#instruction {
+#instruction, p {
   font-family: 'Press Start 2P', cursive;
   font-size: 1.5rem;
-  margin: 8%;
+  margin: 2% 8%;
   color: #FEF2BF;
 }
 
