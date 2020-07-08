@@ -150,6 +150,10 @@ body {
 
 @media only screen and (max-width: 18.75em) {
   html {
-    font-size: 47%; /* 8px/16px = 50% which is = 1rem*/
+    font-size: 52%; /* 8px/16px = 50% which is = 1rem*/
+  }
+
+  .buttons {
+    margin: 1rem;
   }
 }
