@@ -1,26 +1,111 @@
+:root {
+  --btn-color-pri: #2c2504;
+}
+
+html {
+  background-color: #011f3f;
+  font-size: 62.5%; /* 10px/16px = 62.5% which is = 1rem*/
+  box-sizing: inherit;
+}
+
 body {
+  margin: 0;
+  padding: 0;
   text-align: center;
-  background-color: #011F3F;
+  color: #fef2bf;
+  position: relative;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+#instruction-section {
+  font-family: cursive;
+  text-align: justify;
+  font-size: 2.5rem;
+  line-height: 1.5;
+  letter-spacing: 1px;
+  color: #fef2bf;
+  position: absolute;
+  visibility: hidden;
+  transform: translateY(-10rem);
+  transition: all 0.7s;
 }
 
 #instruction {
-  font-family: cursive;
-  font-size: 2rem;
-  margin: 4% 2%;
-  color: #FEF2BF;
+  width: 65%;
+  transform: translateY(55rem);
+  margin: 10% auto;
+  transition: all 0.6s ease;
+}
+.buttons {
+  perspective: 400px;
+  transform: translateY(-2rem);
+  position: absolute;
+  right: 0;
+  margin-right: 1.5rem;
+  visibility: visible;
+  z-index: 400;
+  text-align: center;
+}
+
+.buttons a {
+  display: block;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--btn-color-pri);
+  background-color: rgb(207, 214, 146);
+  border: 3px solid rgb(100, 66, 66);
+  font-size: 1.6rem;
+  font-weight: bolder;
+  border-radius: 15px;
+  padding: 0.7rem;
+  transition: all .7s ease;
+}
+
+.btn-b-1 {
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.46);
+  margin-top: 6rem;
+  position: relative;
+  z-index: 10;
+}
+
+.btn-b-2 {
+  position: relative;
+  margin-top: -4.3rem;
+  z-index: 5;
+  width: 19rem;
+}
+
+#instruction-section:target {
+  background-color: rgba(0, 0, 0, 0.95);
+  visibility: visible;
+}
+
+#instruction-section:target #instruction {
+  transform: translateY(0rem);
+}
+
+#instruction-section:target .btn-b-1 {
+  z-index: 5;
+  transform: rotateX(180deg);
+}
+#instruction-section:target .btn-b-2 {
+  box-shadow: 0px -7px 25px rgba(255, 255, 255, 0.157);
+  z-index: 10;
+  transform: rotateX(180deg);
 }
 
 #level-title {
-  font-family: 'Press Start 2P', cursive;
-  font-size: 3rem;
-  margin: 5%;
-  color: #FEF2BF;
+  font-family: "Press Start 2P", cursive;
+  font-size: 4.5rem;
+  margin: 6%;
+  margin-bottom: 1.5rem;
+  color: currentColor;
 }
 
 .container {
   display: flex;
   justify-content: center;
-
 }
 
 .row {
@@ -28,12 +113,12 @@ body {
 }
 
 .btn {
+  box-sizing: content-box;
   margin: 25px;
-  height: 11rem;
-  width: 11rem;
+  height: 17rem;
+  width: 17rem;
   border: 10px solid black;
   border-radius: 20%;
-
 }
 
 .game-over {
@@ -62,3 +147,8 @@ body {
   background-color: grey;
 }
 
+@media only screen and (max-width: 18.75em) {
+  html {
+    font-size: 47%; /* 8px/16px = 50% which is = 1rem*/
+  }
+}

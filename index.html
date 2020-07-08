@@ -8,38 +8,38 @@
   <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
 </head>
 
-<body>
-<p id="instruction">
-Press any key (or the START button) to start the game. 
-Simon(the bot) will give the first signal. Repeat the signal by pressing the same color lens.
-Simon will add one more signal. Repeat the first and second signals by pressing the same color lenses,
-in order. Simon will add another signal, thus increasing the sequence you that you have to complete correctly.
-Continue playing as long as you can repeat each sequence of signals correctly. <br>
-If you fail to repeat a sequence exactly, Simon responds with a "RAZZ" sound. This means you've lost, and the sequence of signals ends.
-</p>
+<body id="body">
+
+  <div id="instruction-section">
+
+    <div class="buttons">
+        <a class="btn-b-1 btn-0" href="#instruction-section">
+          Read Instruction
+        </a>
+   
+        <a href="#body" class="btn-b-2 btn-0">OK</a>
+    </div>
+    <p id="instruction">
+      Press any key (or the START button) to start the game. 
+      Simon(the bot) will give the first signal. Repeat the signal by pressing the same color lens.
+      Simon will add one more signal. Repeat the first and second signals by pressing the same color lenses,
+      in order. Simon will add another signal, thus increasing the sequence you that you have to complete correctly.
+      Continue playing as long as you can repeat each sequence of signals correctly. <br>
+      If you fail to repeat a sequence exactly, Simon responds with a "RAZZ" sound. This means you've lost, and the sequence of signals ends. <br>
+      </p>
+  </div>
 
   <h1 id="level-title">Press A Key to Start</h1>
   <div class="container">
+
     <div lass="row">
-
-      <div type="button" id="green" class="btn green">
-
-      </div>
-
-      <div type="button" id="red" class="btn red">
-
-      </div>
+      <div type="button" id="green" class="btn green"></div>
+      <div type="button" id="red" class="btn red"></div>
     </div>
 
     <div class="row">
-
-      <div type="button" id="yellow" class="btn yellow">
-
-      </div>
-      <div type="button" id="blue" class="btn blue">
-
-      </div>
-
+      <div type="button" id="yellow" class="btn yellow"></div>
+      <div type="button" id="blue" class="btn blue"></div>
     </div>
 
   </div>

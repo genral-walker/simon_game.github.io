@@ -27,11 +27,11 @@ const checkStatus = () => {
 };
 
 const gameOver = () => {
-    $('body').addClass('game-over');
+    $('html').addClass('game-over');
     new Audio('sounds/wrong.mp3').play();
     $('h1').text('Game Over, Press Any Key to Restart');
     setTimeout(() => {
-        $('body').removeClass('game-over');
+        $('html').removeClass('game-over');
     }, 200);
     level = 0;
     gameStarted = false;
