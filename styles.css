@@ -78,6 +78,7 @@ body {
 
 #instruction-section:target {
   background-color: rgba(0, 0, 0, 0.95);
+  backdrop-filter: blur(10px);
   visibility: visible;
 }
 
